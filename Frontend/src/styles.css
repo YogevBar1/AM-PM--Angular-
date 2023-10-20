@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    font-size: large;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: linear-gradient(lightgreen, darkgreen);
+}
+
+a {
+    color: blue;
+}
+
+hr {
+    margin: 0;
+}
+
+input, button, select {
+    font-size: large;
+}
+

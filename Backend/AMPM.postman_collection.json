@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "46ffe8c6-7822-493b-8454-a0b39f8d2d6b",
+		"name": "AMPM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10634848"
+	},
+	"item": [
+		{
+			"name": "Get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"categoryId\":\"650ee4be713056a7d0228715\",\r\n  \"productName\":\"pizza\",\r\n  \"manufacturingDate\":\"19/11/2022\",\r\n  \"expirationDate\":\"19/11/2023\",\r\n  \"price\": 55\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new product Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"categoryId\":\"650ee4be713056a7d0228715\",\r\n  \"productName\":\"Milk\",\r\n  \"manufacturingDate\":\"19/11/2022\",\r\n  \"expirationDate\":\"19/11/2023\",\r\n  \"price\": 55\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products/651135b27ed28304b9fbd79b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products",
+						"651135b27ed28304b9fbd79b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get products by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/products-by-category/650ee4be713056a7d0228715",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products-by-category",
+						"650ee4be713056a7d0228715"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

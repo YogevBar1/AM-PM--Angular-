@@ -1,0 +1,30 @@
+<div>
+    <select (change)="getProducts($event)">
+        <option disabled selected>Select Category</option>
+        <option *ngFor="let c of categories" [value]="c._id">{{c.categoryName}}</option>
+    </select>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Manufacturing Date</th>
+                <th>Expiration Date</th>
+                <th>price</th>
+                <th>category</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.productName}}</td>
+                <td>{{p.manufacturingDate}}</td>
+                <td>{{p.expirationDate}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.category.categoryName}}</td>
+                <td><button (click)="deleteProduct(p._id)">❌</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
